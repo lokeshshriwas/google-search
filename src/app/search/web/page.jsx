@@ -3,8 +3,9 @@ import Link from "next/link";
 
 
 const page = async ({searchParams}) => {
+  const startIndex = searchParams.start || "1";
   const response = await fetch(
-    `https://www.googleapis.com/customsearch/v1?key=${process.env.NEXT_PUBLIC_SEARCH_API_KEY}&cx=${process.env.NEXT_PUBLIC_GOOGLE_CX}&q=${searchParams.searchTerm}`
+    `https://www.googleapis.com/customsearch/v1?key=${process.env.NEXT_PUBLIC_SEARCH_API_KEY}&cx=${process.env.NEXT_PUBLIC_GOOGLE_CX}&q=${searchParams.searchTerm}&start=${startIndex}`
   );
 
   if(!response.ok) throw new Error("Something went wrong")
@@ -26,7 +27,7 @@ const page = async ({searchParams}) => {
   }
 
   return (
-    <div className="bg-stone-800 w-full text-white border-t border-stone-700 pb-24">
+    <div className="bg-stone-800 w-full text-white border-t border-stone-700">
       {results && <WebSearchResult results={data}/>}
     </div>
   );
