@@ -1,3 +1,4 @@
+import WebSearchResult from "@/components/WebSearchResult";
 import Link from "next/link";
 
 
@@ -13,7 +14,7 @@ const page = async ({searchParams}) => {
 
   if(!results){
     return(
-      <div className="flex w-full flex-col justify-center items-center pt-10">
+      <div className="flex w-full flex-col justify-center items-center pt-10 bg-stone-800">
         <h1 className="text-3xl mb-4">No results found for {searchParams.searchTerm}</h1>
         <p className="text-lg">Try searching the web or images something else &nbsp;
           <Link href="/" className="text-blue-400 underline">
@@ -25,10 +26,8 @@ const page = async ({searchParams}) => {
   }
 
   return (
-    <div className="bg-stone-800 w-full text-white border-t border-stone-700">
-      {results && results.map((result)=> (
-        <h1 key={result.title}>{result.title}</h1>
-      ))}
+    <div className="bg-stone-800 w-full text-white border-t border-stone-700 pb-24">
+      {results && <WebSearchResult results={data}/>}
     </div>
   );
 };

@@ -1,6 +1,5 @@
 "use client";
 
-import { PathnameContext } from "next/dist/shared/lib/hooks-client-context.shared-runtime";
 import { usePathname, useSearchParams, useRouter } from "next/navigation";
 import { FaRegImage } from "react-icons/fa6";
 import { IoMdSearch } from "react-icons/io";
