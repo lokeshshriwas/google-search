@@ -3,7 +3,7 @@ import CountryLookup from "./CountryLookup";
 
 const Footer = () => {
   return (
-    <footer className="absolute w-full bottom-0 text-sm text-gray-200 bg-stone-800">
+    <footer className="absolute w-full bottom-0 text-sm text-gray-200 bg-stone-700">
       <div className="border-b px-8 py-3">
         <CountryLookup />
       </div>
