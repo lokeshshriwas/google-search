@@ -24,7 +24,7 @@ const SearchHeader = () => {
           <IoSettingsOutline className="bg-transparent hover:bg-stone-700 p-2 text-4xl rounded-full cursor-pointer" />
           <CgMenuGridO className="bg-transparent hover:bg-stone-700 p-2 text-4xl rounded-full cursor-pointer" />
         </div>
-        <button className="bg-stone-700 px-6 py-2 rounded-md hover:brightness-105 hover:shadow-md-gray transition-shadow ml-2 ">
+        <button className=" bg-stone-700 px-6 py-2 rounded-md hover:brightness-105 hover:shadow-md-gray transition-shadow ml-2 ">
           Sign up
         </button>
       </div>
