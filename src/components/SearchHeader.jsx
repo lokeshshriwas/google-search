@@ -13,8 +13,7 @@ const SearchHeader = () => {
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/330px-Google_2015_logo.svg.png"
             alt="Google logo"
-            width={120}
-            height={40}
+            className=" h-5 sm:h-[40px] sm:-w-[120px]"
           />
         </Link>
         <div className="flex-1">
@@ -24,7 +23,7 @@ const SearchHeader = () => {
           <IoSettingsOutline className="bg-transparent hover:bg-stone-700 p-2 text-4xl rounded-full cursor-pointer" />
           <CgMenuGridO className="bg-transparent hover:bg-stone-700 p-2 text-4xl rounded-full cursor-pointer" />
         </div>
-        <button className=" bg-stone-700 px-6 py-2 rounded-md hover:brightness-105 hover:shadow-md-gray transition-shadow ml-2 ">
+        <button className="hidden sm:inline sm:bg-stone-700 sm:px-6 sm:py-2 sm:rounded-md hover:brightness-105 hover:shadow-md-gray transition-shadow sm:ml-2 ">
           Sign up
         </button>
       </div>
