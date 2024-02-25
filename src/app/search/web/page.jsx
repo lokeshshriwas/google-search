@@ -6,7 +6,7 @@ const page = async ({searchParams}) => {
   const startIndex = searchParams.start || "1";
   const response = await fetch(
     `https://www.googleapis.com/customsearch/v1?key=${process.env.NEXT_PUBLIC_SEARCH_API_KEY}&cx=${process.env.NEXT_PUBLIC_GOOGLE_CX}&q=${searchParams.searchTerm}&start=${startIndex}`
-  );
+    );
 
   if(!response.ok) throw new Error("Something went wrong")
 
