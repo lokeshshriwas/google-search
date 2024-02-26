@@ -21,7 +21,6 @@ const Loading = () => {
         <div className="h-2.5 w-[560px] bg-stone-500 rounded-full mb-2.5"></div>
         <div className="h-2.5 w-[460px] bg-stone-500 rounded-full mb-2.5"></div>
     </div>
-  \
     </div>
     
   )

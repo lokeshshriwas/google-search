@@ -7,9 +7,9 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 
 const Pagination = () => {
   const pathName = usePathname();
-  const searchParam = useSearchParams();
-  const searchTerm = searchParam.get("searchTerm");
-  const startIndex = +searchParam.get("start") || 1;
+  const searchParams = useSearchParams();
+  const searchTerm = searchParams.get("searchTerm");
+  const startIndex = +searchParams.get("start") || 1;
   return (
     <div className="flex px-10 pb-4 justify-center space-x-10 sm:space-x-30">
       {startIndex >= 10 && (
