@@ -1,5 +1,7 @@
 import ImageSearchResult from "@/components/ImageSearchResult";
 import Link from "next/link";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 const page = async ({ searchParams }) => {
   const startIndex = searchParams.start || "1";
@@ -31,7 +33,7 @@ const page = async ({ searchParams }) => {
 
   return (
     <div className="bg-stone-800 w-full text-white border-t border-stone-700 pb-24">
-      {results && <ImageSearchResult results={data} />}
+      <Suspense fallback={<Loading/>}>{results && <ImageSearchResult results={data} />}</Suspense>
     </div>
   );
 };
