@@ -1,7 +1,6 @@
 "use client";
 
 import { usePathname, useSearchParams, useRouter } from "next/navigation";
-import { Suspense } from "react";
 import { FaRegImage } from "react-icons/fa6";
 import { IoMdSearch } from "react-icons/io";
 
@@ -18,7 +17,6 @@ const SearchHeaderOptions = () => {
   };
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
       <div className="flex space-x-2 select-none border-b w-full justify-start pl-10 lg:justify-start lg:pl-52 text-gray-300 text-sm">
         <div
           onClick={() => selectTab("All")}
@@ -39,7 +37,6 @@ const SearchHeaderOptions = () => {
           <p>Images</p>
         </div>
       </div>
-    </Suspense>
   );
 };
 

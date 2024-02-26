@@ -5,7 +5,7 @@ import { CgMenuGridO } from "react-icons/cg";
 import { IoSettingsOutline } from "react-icons/io5";
 import SearchHeaderOptions from "@/components/SearchHeaderOptions";
 import Image from "next/image";
-import logo from '@/components/google.png'
+
 
 const SearchHeader = () => {
   return (
@@ -13,7 +13,7 @@ const SearchHeader = () => {
       <div className="flex w-full p-6 items-center justify-between">
         <Link href="/">
           <Image
-            src={logo}
+            src={"https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png"}
             alt="Google logo"
             height={20}
             width={120}

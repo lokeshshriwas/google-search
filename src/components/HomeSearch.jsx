@@ -17,15 +17,8 @@ const HomeSearch = () => {
     setSearchInput("");
   };
 
-  const handleEnterSubmit = (event) => {
-    if (event.key == "Enter" && searchInput.length > 0) {
-      handleSubmit(event)
-    }
-  };
-
   const handleRandomSearch = async (e) => {
     setRandomSearchLoading(true);
-    e.preventDefault();
     const response = await fetch("https://random-word-api.herokuapp.com/word", {
       method: "GET",
     })
@@ -48,7 +41,7 @@ const HomeSearch = () => {
           className="flex-grow bg-stone-900 focus:outline-none "
           value={searchInput}
           onChange={(e) => setSearchInput(e.target.value)}
-          onKeyDown={handleEnterSubmit}
+
         />
         <FaMicrophone className="text-xl text-gray-200 ml-3" />
       </form>
@@ -59,9 +52,9 @@ const HomeSearch = () => {
         <button
           className="bg-stone-800 rounded-md text-sm  hover:ring-white focus:outline-none active:ring-white transition-shadow h-10 w-36 disabled:opacity-60"
           disabled={randomSearchLoading}
-          onClick={(e) => handleRandomSearch(e)}
+          onClick={(e)=>handleRandomSearch(e)}
         >
-          {randomSearchLoading ? "loading..." : "I am Feeling Lucky"}
+          {randomSearchLoading ? "Loading..." : "I am Feeling Lucky"}
         </button>
       </div>
     </>
