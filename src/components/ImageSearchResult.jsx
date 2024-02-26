@@ -13,7 +13,8 @@ const ImageSearchResult = ({ results }) => {
                 <img
                   src={result.link}
                   alt={result.title}
-                  className="max-h-[70%] object-contain rounded-2xl"
+                  height="70%"
+                  className="object-contain"
                 />
               </Link>
               <div className="h-[30%]">

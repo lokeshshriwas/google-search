@@ -4,16 +4,19 @@ import SearchBox from "@/components/SearchBox";
 import { CgMenuGridO } from "react-icons/cg";
 import { IoSettingsOutline } from "react-icons/io5";
 import SearchHeaderOptions from "@/components/SearchHeaderOptions";
+import Image from "next/image";
+import logo from '@/components/google.png'
 
 const SearchHeader = () => {
   return (
     <header className="sticky top-0 bg-stone-800 text-white">
       <div className="flex w-full p-6 items-center justify-between">
         <Link href="/">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/330px-Google_2015_logo.svg.png"
+          <Image
+            src={logo}
             alt="Google logo"
-            className=" h-5 sm:h-[40px] sm:-w-[120px]"
+            height={20}
+            width={120}
           />
         </Link>
         <div className="flex-1">
