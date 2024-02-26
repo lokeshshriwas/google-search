@@ -1,16 +1,15 @@
 import ImageSearchResult from "@/components/ImageSearchResult";
 import Link from "next/link";
 import { Suspense } from "react";
-import Loading from "@/app/search/image/loading";
+import Loading from "@/components/ImageLoading";
 
 const page = async ({ searchParams }) => {
-
-  if(searchParams){
-    const startIndex = searchParams.start || "1";
-  await new Promise((resolve) => setTimeout(resolve, 1000));
+  
+  const startIndex = searchParams.start || "1";
   const response = await fetch(
     `https://www.googleapis.com/customsearch/v1?key=${process.env.NEXT_PUBLIC_SEARCH_API_KEY}&cx=${process.env.NEXT_PUBLIC_GOOGLE_CX}&q=${searchParams.searchTerm}&searchType=image&start=${startIndex}`
-  );
+    );
+    await new Promise((resolve) => setTimeout(resolve, 300));
 
   if (!response.ok) throw new Error("Something went wrong");
 
@@ -32,8 +31,6 @@ const page = async ({ searchParams }) => {
       </div>
     );
   }
-  } else return
-  
 
   return (
     <div className="bg-stone-800 w-full text-white border-t border-stone-700 pb-24">
