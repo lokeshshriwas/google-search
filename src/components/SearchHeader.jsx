@@ -1,9 +1,9 @@
 import Link from "next/link";
 import React from "react";
-import SearchBox from "./SearchBox";
+import SearchBox from "@/components/SearchBox";
 import { CgMenuGridO } from "react-icons/cg";
 import { IoSettingsOutline } from "react-icons/io5";
-import SearchHeaderOptions from "./SearchHeaderOptions";
+import SearchHeaderOptions from "@/components/SearchHeaderOptions";
 
 const SearchHeader = () => {
   return (

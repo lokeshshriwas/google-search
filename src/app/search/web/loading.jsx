@@ -1,6 +1,6 @@
 import React from 'react'
 
-const loading = () => {
+const Loading = () => {
   return (
     <div>
         <div className='mx-2 pt-10 max-w-6xl lg:pl-52 animate-pulse'>
@@ -27,4 +27,4 @@ const loading = () => {
   )
 }
 
-export default loading
+export default Loading

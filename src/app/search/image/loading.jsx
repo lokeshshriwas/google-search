@@ -1,6 +1,6 @@
 import React from "react";
 
-const loading = () => {
+const Loading = () => {
   return (
     <div>
       <div className="aniamte-pulse grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 pt-10 mx-2 lg:pl-52 max-w-6xl pb-42">
@@ -34,4 +34,4 @@ const loading = () => {
   );
 };
 
-export default loading;
+export default Loading;

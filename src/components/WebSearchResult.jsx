@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import Parser from "html-react-parser"
-import Pagination from "./Pagination";
+import Pagination from "@/components/Pagination";
 
 const WebSearchResult = ({ results }) => {
   return (

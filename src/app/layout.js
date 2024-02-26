@@ -1,6 +1,6 @@
 import Footer from "@/components/Footer";
-import "./globals.css";
-import favicon from "./favicon.ico"
+import "@/app/globals.css";
+import favicon from "@/app/favicon.ico"
 
 export const metadata = {
   title: "Google",

@@ -1,5 +1,5 @@
 import React from "react";
-import CountryLookup from "./CountryLookup";
+import CountryLookup from "@/components/CountryLookup";
 
 const Footer = () => {
   return (
