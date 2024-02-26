@@ -17,23 +17,27 @@ const page = async ({ searchParams }) => {
 
   if (!results) {
     return (
-      <div className="flex w-full flex-col justify-center items-center pt-10 bg-stone-800">
-        <h1 className="text-3xl mb-4">
-          No results found for {searchParams.searchTerm}
-        </h1>
-        <p className="text-lg">
-          Try searching the web or images something else &nbsp;
-          <Link href="/" className="text-blue-400 underline">
-            Home
-          </Link>
-        </p>
-      </div>
+      <Suspense fallback={<Loading />}>
+        <div className="flex w-full flex-col justify-center items-center pt-10 bg-stone-800">
+          <h1 className="text-3xl mb-4">
+            No results found for {searchParams.searchTerm}
+          </h1>
+          <p className="text-lg">
+            Try searching the web or images something else &nbsp;
+            <Link href="/" className="text-blue-400 underline">
+              Home
+            </Link>
+          </p>
+        </div>
+      </Suspense>
     );
   }
 
   return (
     <div className="bg-stone-800 w-full text-white border-t border-stone-700 pb-24">
-      <Suspense fallback={<Loading/>}>{results && <ImageSearchResult results={data} />}</Suspense>
+      <Suspense fallback={<Loading />}>
+        {results && <ImageSearchResult results={data} />}
+      </Suspense>
     </div>
   );
 };
