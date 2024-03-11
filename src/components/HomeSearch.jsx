@@ -54,7 +54,7 @@ const HomeSearch = () => {
           disabled={randomSearchLoading}
           onClick={(e)=>handleRandomSearch(e)}
         >
-          {randomSearchLoading ? "Loading..." : "I am Feeling Lucky"}
+          {randomSearchLoading ? "Loading..." : "Random Search"}
         </button>
       </div>
     </>
